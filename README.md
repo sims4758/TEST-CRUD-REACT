@@ -10,7 +10,7 @@ $ npm install
 $ npm run dev
 ```
 
-## Set up access_token
-Go to src/Pet.jsx
+## Set up email
+Go to src/components/PetForm.jsx
 
-Change token = access_token
+find sendEmail and change u email
