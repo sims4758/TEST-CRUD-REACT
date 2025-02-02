@@ -9,3 +9,8 @@ $ npm install
 ```bash
 $ npm run dev
 ```
+
+## Set up access_token
+Go to src/Pet.jsx
+
+Change token = access_token
