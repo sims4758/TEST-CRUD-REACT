@@ -6,6 +6,6 @@ import Pet from './Pet.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Pet />
+    <App />
   </StrictMode>,
 )
