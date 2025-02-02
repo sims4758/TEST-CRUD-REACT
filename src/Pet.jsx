@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './Pet.css';
 
 const URL = 'http://localhost:3000/'
-const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImthY2hhbmFuIiwic3ViIjoyLCJpYXQiOjE3MzgzMDUzODIsImV4cCI6MTczODMwODk4Mn0.n33jscNixVH9YTWQQ50YCONrhxnEi6xb6QbJOz7e4wM'
+const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwic3ViIjoxLCJpYXQiOjE3MzgzMTcyODksImV4cCI6MTczODMyMDg4OX0.iHibXdLPpKUMywpdxRX7pav5wQlrJmZIeY9ns-0f80w'
 
 
 function PetForm() {

@@ -3,7 +3,6 @@ const API_URL = "http://localhost:3000";
 export const sendEmail = async (recipient, subject, html, text) => {
   const token = localStorage.getItem("accessToken");
 
-  // ✅ ใช้ object ปกติ ไม่ต้อง JSON.stringify() ซ้ำซ้อน
   const bodyData = {
     recipient: recipient,
     subject: subject,
@@ -18,7 +17,7 @@ export const sendEmail = async (recipient, subject, html, text) => {
         "Content-Type": "application/json",
         Authorization: `Bearer ${token}`,
       },
-      body: JSON.stringify(bodyData), // ✅ แปลงเป็น JSON แค่รอบเดียว
+      body: JSON.stringify(bodyData),
     });
 
     if (!response.ok) {

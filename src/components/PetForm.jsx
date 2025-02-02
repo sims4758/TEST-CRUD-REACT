@@ -26,8 +26,6 @@ function PetForm() {
   const handleUpload = async () => {
     if (selectedFile) {
         const token = getAccessToken();
-        console.log("dasdasds");
-        console.log(token);
       const formData = new FormData();
       formData.append("file", selectedFile); // 'file' คือชื่อ field ที่ server คาดหวัง
 
@@ -60,20 +58,12 @@ function PetForm() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    // clearTokens();
-    
     const result = await refreshAccessToken();
-    
     const token = getAccessToken();
     try {
       await handleUpload();
       const petToSubmit = { ...pet };
       petToSubmit.petAge = parseInt(petToSubmit.petAge);
-
-      console.log('post pet');
-      console.log(token);
-      
-      
       const submitResponse = await fetch(API_URL + "/pets", {
         method: "POST",
         headers: {
@@ -84,7 +74,6 @@ function PetForm() {
       });
 
       const submitData = await submitResponse.json();
-      console.log(submitData);
       if (submitData.status === 200) {
         sendEmail(
             "kachanan.jaiboon@gmail.com",
